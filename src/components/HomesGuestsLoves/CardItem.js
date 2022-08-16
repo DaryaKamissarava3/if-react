@@ -1,4 +1,5 @@
 import Picture from './Picture';
+import '../../assets/styles/cardItem.css';
 
 function CardItem(props) {
   return (

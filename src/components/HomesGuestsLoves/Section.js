@@ -1,4 +1,5 @@
 import Container from './Container';
+import '../../assets/styles/section.css';
 
 function Section(props) {
   return (

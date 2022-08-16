@@ -1,0 +1,9 @@
+.section {
+  padding: 120px 0;
+}
+
+.section--blue {
+  background-color: var(--bg-main-color);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -1,5 +1,3 @@
-import CardItem from './CardItem';
-
 const data = [
   {
     id: '71ce9eac-e9b9-44f0-a342-9ff0b565f3b7',
@@ -59,23 +57,4 @@ const data = [
   },
 ];
 
-function Card() {
-  return (
-    <div className="card card-d">
-      {
-        data.map((item) =>
-          (
-            <CardItem
-              imageUrl={item.imageUrl}
-              name={item.name}
-              city={item.city}
-              country={item.country}
-              key={item.id}
-            />
-          ))
-      }
-    </div>
-  );
-}
-
-export default Card;
+export default data;

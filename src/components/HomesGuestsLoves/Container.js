@@ -1,5 +1,6 @@
 import SectionTitle from './SectionTitle';
 import Card from './Card';
+import '../../assets/styles/container.css';
 
 function Container(props) {
   return (

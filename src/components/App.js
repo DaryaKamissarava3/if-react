@@ -1,5 +1,4 @@
-import './App.css';
-import Section from './Section';
+import Section from './HomesGuestsLoves/Section';
 
 function App() {
   return (

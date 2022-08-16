@@ -1,3 +1,5 @@
+import '../../assets/styles/picture.css';
+
 function Picture(props) {
   return (
     <img

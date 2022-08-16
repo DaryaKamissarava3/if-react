@@ -1,3 +1,5 @@
+import '../../assets/styles/sectionTitle.css';
+
 function SectionTitle(props) {
   return (
     <div className="section-header">

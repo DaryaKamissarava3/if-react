@@ -1,0 +1,14 @@
+.section-header {
+  padding-bottom: 104px;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 500;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--dark-mode-3-color);
+  position: relative;
+}
