@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from './HomesGuestsLoves/Section';
+import Section from './components/HomesGuestsLoves/Section';
 
 function App() {
   return (
