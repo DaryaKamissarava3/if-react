@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../assets/styles/picture.css';
 
 function Picture(props) {

@@ -1,3 +1,4 @@
+import React from 'react';
 import Section from './HomesGuestsLoves/Section';
 
 function App() {
