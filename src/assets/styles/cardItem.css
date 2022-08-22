@@ -1,0 +1,19 @@
+.card-item {
+  width: 296px;
+  padding-bottom: 15px;
+}
+
+.card-hostel-name {
+  padding: 12px 0 3px 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--accent-blue-color);
+}
+
+.card-hostel-location {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
