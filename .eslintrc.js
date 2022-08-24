@@ -29,6 +29,7 @@ module.exports = {
     "jsx-a11y/label-has-associated-control":"off",
     "react/jsx-no-bind": "off",
     "prefer-arrow-callback":"off",
+    "no-unused-vars":"off",
   },
   parserOptions: {
     ecmaVersion: 6,
