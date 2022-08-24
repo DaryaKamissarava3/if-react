@@ -26,6 +26,9 @@ module.exports = {
     "react/destructuring-assignment":"off",
     "implicit-arrow-linebreak":"off",
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+    "jsx-a11y/label-has-associated-control":"off",
+    "react/jsx-no-bind": "off",
+    "prefer-arrow-callback":"off",
   },
   parserOptions: {
     ecmaVersion: 6,

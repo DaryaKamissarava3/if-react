@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  padding-top: 51px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 205px;
+  height: 40px;
+}
+
+.svg-img-night {
+  width: 30px;
+  height: 30px;
+}
+
+.svg-img-account {
+  width: 40px;
+  height: 40px;
+}

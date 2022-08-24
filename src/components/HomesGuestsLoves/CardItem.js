@@ -1,6 +1,6 @@
 import React from 'react';
 import Picture from './Picture';
-import '../../assets/styles/cardItem.css';
+import '../../assets/styles/HomesGuestsLoves/cardItem.css';
 
 function CardItem(props) {
   return (

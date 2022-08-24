@@ -1,0 +1,147 @@
+.form-container {
+  margin-bottom: 120px;
+  max-width: 1232px;
+  height: 64px;
+  background: #ffffff;
+  border: 3px solid #f3f3f4;
+  border-radius: 8px;
+}
+
+.row-form {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.input-destination {
+  width: 36%;
+}
+
+input {
+  padding-left: 24px;
+  height: 57px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.col-destination {
+  width: 100%;
+}
+
+label {
+  position: absolute;
+  color: #383838;
+  font-size: 18px;
+  transition: 0.2s ease all;
+}
+
+input:focus ~ .label-destination,
+input:not(:focus):valid ~ .label-destination {
+  top: -48px;
+  left: 24px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.label-destination,
+.label-date,
+.label--date--second {
+  left: 24px;
+  top: 15px;
+}
+
+.input-date-check {
+  margin-top: -3px;
+  display: flex;
+  width: 22%;
+  border: 3px solid #f5bd41;
+  border-radius: 8px;
+}
+
+.col-destination:focus,
+.col-guests:focus {
+  outline: 0;
+  border: 3px solid var(--accent-yellow-color);
+  border-radius: 8px;
+}
+
+.col-date:focus {
+  outline: none;
+}
+
+.label-date-first,
+.label-date-second {
+  width: 50%;
+  position: relative;
+}
+
+.col-date {
+  width: 100%;
+}
+
+input:focus ~ .label-date,
+input:not(:focus):valid ~ .label-date {
+  top: -48px;
+  left: 24px;
+  color: var(--general-white-color);
+  opacity: 1;
+}
+
+input:focus ~ .label-date-second,
+input:not(:focus):valid ~ .label-date-second {
+  top: -48px;
+  left: 24px;
+  color: var(--general-white-color);
+  opacity: 1;
+}
+
+input:focus ~ .label-date-second,
+input:not(:focus):valid ~ .label-date-second {
+  top: -48px;
+  left: 24px;
+  color: var(--general-white-color);
+  opacity: 1;
+}
+
+input:focus ~ .label-guests,
+input:not(:focus):valid ~ .label-guests {
+  top: -48px;
+  right: 24px;
+  color: var(--general-white-color);
+  opacity: 1;
+}
+
+input[type='date'] {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding-inline-start: 24px;
+}
+
+.col-guests {
+  width: 27%;
+}
+
+.label-guests {
+  left: 713px;
+  top: 15px;
+}
+
+.col-button {
+  width: 16.6%;
+  height: 64px;
+  background: #3077c6;
+  border-radius: 8px;
+  border: none;
+  margin-block-start: -3px;
+  margin-inline-end: -3px;
+  cursor: pointer;
+}
+
+.button-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+}
