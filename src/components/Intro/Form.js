@@ -20,8 +20,7 @@ class Form extends React.Component {
   getDestinationInputValue = (value) => {
     this.setState({
       destinationInputValue: value,
-    }),
-      console.log(value)
+    })
   };
 
   addFilterForm = () => {

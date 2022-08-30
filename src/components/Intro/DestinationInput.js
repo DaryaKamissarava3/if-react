@@ -1,13 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
+
 
 function DestinationInput(props){
+
   return(
     <div className="input-destination">
       <input
         id="destination"
         type="text"
-        name="place"
-        onChange={props.getDestinationInputValue}
+        name="destination"
+        onChange={props.onChange}
         className="col-destination col-lg-12 col-12"
         required
       />
