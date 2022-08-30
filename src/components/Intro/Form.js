@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import '../../assets/styles/Intro/Form.css';
 import AvailableHotels from "./AvailableHotels";
 import data from "../../constants/arrays/Hotels";
+import DestinationInput from "./DestinationInput";
+import DatesInput from "./DatesInput";
+import GuestsInput from "./GuestsInput";
 
 class Form extends React.Component {
   constructor(props) {
@@ -26,11 +29,11 @@ class Form extends React.Component {
   };
 
   filterArray = () => {
-   data.filter((item) =>
-            item.city.toLowerCase().includes(this.state.destinationInputValue.toLowerCase()) ||
-            item.name.toLowerCase().includes(this.state.destinationInputValue.toLowerCase()) ||
-            item.country.toLowerCase().includes(this.state.destinationInputValue.toLowerCase())
-          )
+    data.filter((item) =>
+      item.city.toLowerCase().includes(this.state.destinationInputValue.toLowerCase()) ||
+      item.name.toLowerCase().includes(this.state.destinationInputValue.toLowerCase()) ||
+      item.country.toLowerCase().includes(this.state.destinationInputValue.toLowerCase())
+    )
   };
 
 
@@ -50,49 +53,9 @@ class Form extends React.Component {
         <article className="form-container col-lg-12 col-12">
           <form action="/" method="post">
             <div className="row-form">
-              <div className="input-destination">
-                <input
-                  id="destination"
-                  type="text"
-                  name="place"
-                  onChange={this.getDestinationInputValue}
-                  className="col-destination col-lg-12 col-12"
-                  required
-                />
-                <label className="label-destination" htmlFor="destination"
-                >Your destination or hotel name</label
-                >
-              </div>
-              <div className="input-date-check">
-                <div className="label-date-first">
-                  <input
-                    id="check-in"
-                    type="text"
-                    className="col-date col-lg-12 col-12"
-                    required
-                  />
-                  <label className="label-date" htmlFor="check-in">Check-in</label>
-                </div>
-                <div className="label-date-second">
-                  <input
-                    id="check-out"
-                    type="text"
-                    className="col-date col-lg-12 col-12"
-                    required
-                  />
-                  <label className="label-date" htmlFor="check-out">Check-out</label>
-                </div>
-              </div>
-              <input
-                id="count-guests"
-                type="text"
-                name="guests"
-                className="col-guests col-lg-12 col-12"
-                required
-              />
-              <label id="label-guests" className="label-guests" htmlFor="count-guests"
-              >2 Adults &#8212; 0 Children &#8212; 1 Room</label
-              >
+              <DestinationInput onChange={this.getDestinationInputValue} />
+              <DatesInput />
+              <GuestsInput />
               <button id="search-btn" className="col-button button-text col-lg-12 col-12"
                       onClick={this.clickButton}>
                 Search
