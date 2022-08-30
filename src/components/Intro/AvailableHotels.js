@@ -1,9 +1,14 @@
 import React from 'react';
-import Card from '../HomesGuestsLoves/Card';
 
-function AvailableHotels() {
+function AvailableHotels({city,imgUrl,name,country}) {
   return (
-    <Card />
+    <div>
+      <div>
+        <img className="ddd" src={imgUrl} alt={name} />
+      </div>
+      <a href="#" >{name}</a>
+      <span>{city},{country}</span>
+    </div>
   );
 }
 
