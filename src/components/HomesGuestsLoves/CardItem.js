@@ -11,8 +11,10 @@ function CardItem(props) {
       />
       <div className="card-hostel-name">{props.name}</div>
       <div className="card-hostel-location">
-        {props.city}
-        {props.country}
+        {props.city},
+        <span className="card-hostel-country">
+         {props.country}
+        </span>
       </div>
     </div>
   );

@@ -1,13 +1,21 @@
 import React from 'react';
+import CardItem from "../HomesGuestsLoves/CardItem";
 
-function AvailableHotels({city,imgUrl,name,country}) {
+function AvailableHotels(props) {
   return (
-    <div>
+    <div className="available-hotels hide">
       <div>
-        <img className="ddd" src={imgUrl} alt={name} />
+        {props.foundHotels.map((item) =>
+          (
+            <CardItem
+              imageUrl={item.imageUrl}
+              name={item.name}
+              city={item.city}
+              country={item.country}
+              key={item.id}
+            />
+          ))}
       </div>
-      <a href="#" >{name}</a>
-      <span>{city},{country}</span>
     </div>
   );
 }
