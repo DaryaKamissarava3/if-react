@@ -12,3 +12,15 @@
   color: var(--dark-mode-3-color);
   position: relative;
 }
+
+.section-subtitle.underline::after{
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: var(--accent-yellow-color);
+  position: absolute;
+  top: 115%;
+  left: 46%;
+  z-index: 2;
+}

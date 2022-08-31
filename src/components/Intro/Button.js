@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Button(props) {
-  const [isShown, setIsShown] = useState(false);
-
-  function handleClick() {
-    setIsShown(true);
-  }
-
   return (
     <button
       id={props.id}

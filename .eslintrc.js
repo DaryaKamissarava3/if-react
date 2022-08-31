@@ -30,6 +30,8 @@ module.exports = {
     "react/jsx-no-bind": "off",
     "prefer-arrow-callback":"off",
     "no-unused-vars":"off",
+    "no-alert":"off",
+    "func-names":"off",
   },
   parserOptions: {
     ecmaVersion: 6,

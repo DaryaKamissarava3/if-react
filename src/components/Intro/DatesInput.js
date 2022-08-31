@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-function DestinationInput(){
-  return(
+function DestinationInput() {
+  return (
     <div className="input-date-check">
       <div className="label-date-first">
         <input

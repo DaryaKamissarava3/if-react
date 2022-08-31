@@ -13,7 +13,7 @@ function CardItem(props) {
       <div className="card-hostel-location">
         {props.city},
         <span className="card-hostel-country">
-         {props.country}
+          {props.country}
         </span>
       </div>
     </div>

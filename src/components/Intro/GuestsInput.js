@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function DestinationInput() {
   return (
@@ -10,9 +10,13 @@ function DestinationInput() {
         className="col-guests col-lg-12 col-12"
         required
       />
-      <label id="label-guests" className="label-guests" htmlFor="count-guests"
-      >2 Adults &#8212; 0 Children &#8212; 1 Room</label
+      <label
+        id="label-guests"
+        className="label-guests"
+        htmlFor="count-guests"
       >
+        2 Adults &#8212; 0 Children &#8212; 1 Room
+      </label>
     </>
   );
 }
