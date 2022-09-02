@@ -1,20 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../assets/styles/Intro/Form.css';
-import data from '../../constants/arrays/Hotels';
 import DestinationInput from './DestinationInput';
 import DatesInput from './DatesInput';
 import GuestsInput from './GuestsInput';
 
-function Form(props) {
-  const [destination, setDestination] = useState('');
+function FormFetch(props) {
+  const [destinationValue, setDestinationValue] = useState('');
+  const [dataFetch, setDataFetch] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://fe-student-api.herokuapp.com/api/hotels?search=${destinationValue}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+      })
+      .then((data) => {
+        setDataFetch(data);
+      })
+      .catch((error) => {
+        console.log('Error fetching data', error);
+      });
+  }, []);
 
   const handleInput = (event) => {
-    setDestination(event.target.value);
+    setDestinationValue(event.target.value);
   };
 
-  const filterArray = (value) => {
+  const findMatchesInArray = (value) => {
     const string = value.toString().toLowerCase();
-    return data.filter(function (o) {
+    return dataFetch.filter(function (o) {
       return Object.keys(o).some(function (k) {
         return o[k].toString().toLowerCase().indexOf(string) !== -1;
       });
@@ -22,14 +38,14 @@ function Form(props) {
   };
 
   const handleClick = () => {
-    const resultArrOfHotels = filterArray(destination);
-    const availableHotelsBlock = document.getElementsByClassName('available-hotels')[0];
+    const resultArrOfHotels = findMatchesInArray(destinationValue);
+    const availableBlock = document.getElementsByClassName('available-hotels')[0];
     if (resultArrOfHotels.length === 0) {
-      availableHotelsBlock.classList.add('hide');
+      availableBlock.classList.add('hide');
       alert('nothing was found');
       return;
     }
-    availableHotelsBlock.classList.remove('hide');
+    availableBlock.classList.remove('hide');
     props.updateData(resultArrOfHotels);
   };
 
@@ -54,4 +70,4 @@ function Form(props) {
   );
 }
 
-export default Form;
+export default FormFetch;
