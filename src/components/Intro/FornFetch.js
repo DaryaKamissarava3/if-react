@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import '../../assets/styles/Intro/Form.css';
 import DestinationInput from './DestinationInput';
 import DatesInput from './DatesInput';
@@ -6,39 +6,27 @@ import GuestsInput from './GuestsInput';
 
 function FormFetch(props) {
   const [destinationValue, setDestinationValue] = useState('');
-  const [dataFetch, setDataFetch] = useState(null);
+  const [dataFetch, setDataFetch] = useState([]);
+
+  const getData = useCallback(() => {
+    fetch(`https://fe-student-api.herokuapp.com/api/hotels?search=${destinationValue}`)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res)
+        setDataFetch(res)
+      })
+  })
 
   useEffect(() => {
-    fetch(`https://fe-student-api.herokuapp.com/api/hotels?search=${destinationValue}`)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw response;
-      })
-      .then((data) => {
-        setDataFetch(data);
-      })
-      .catch((error) => {
-        console.log('Error fetching data', error);
-      });
-  }, []);
+    getData()
+  }, [destinationValue])
 
   const handleInput = (event) => {
     setDestinationValue(event.target.value);
   };
 
-  const findMatchesInArray = (value) => {
-    const string = value.toString().toLowerCase();
-    return dataFetch.filter(function (o) {
-      return Object.keys(o).some(function (k) {
-        return o[k].toString().toLowerCase().indexOf(string) !== -1;
-      });
-    });
-  };
-
   const handleClick = () => {
-    const resultArrOfHotels = findMatchesInArray(destinationValue);
+    const resultArrOfHotels = dataFetch;
     const availableBlock = document.getElementsByClassName('available-hotels')[0];
     if (resultArrOfHotels.length === 0) {
       availableBlock.classList.add('hide');
@@ -53,9 +41,9 @@ function FormFetch(props) {
     <article className="form-container col-lg-12 col-12">
       <form action="/" method="get">
         <div className="row-form">
-          <DestinationInput onChange={handleInput} />
-          <DatesInput />
-          <GuestsInput />
+          <DestinationInput onChange={handleInput}/>
+          <DatesInput/>
+          <GuestsInput/>
           <button
             type="submit"
             id="search-btn"

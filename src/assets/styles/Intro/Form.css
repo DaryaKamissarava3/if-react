@@ -72,38 +72,8 @@ input:not(:focus):valid ~ .label-destination {
   outline: none;
 }
 
-.label-date-first,
-.label-date-second {
-  width: 50%;
-  position: relative;
-}
-
 .col-date {
   width: 100%;
-}
-
-input:focus ~ .label-date,
-input:not(:focus):valid ~ .label-date {
-  top: -48px;
-  left: 24px;
-  color: var(--general-white-color);
-  opacity: 1;
-}
-
-input:focus ~ .label-date-second,
-input:not(:focus):valid ~ .label-date-second {
-  top: -48px;
-  left: 24px;
-  color: var(--general-white-color);
-  opacity: 1;
-}
-
-input:focus ~ .label-date-second,
-input:not(:focus):valid ~ .label-date-second {
-  top: -48px;
-  left: 24px;
-  color: var(--general-white-color);
-  opacity: 1;
 }
 
 input:focus ~ .label-guests,

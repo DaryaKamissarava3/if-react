@@ -1,25 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function DestinationInput() {
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const handleOnBlur = ({ target: { value } }) => {
+    const date = new Date(value);
+      console.log("value: %s", date);
+  };
   return (
+
     <div className="input-date-check">
       <div className="label-date-first">
-        <input
+        <DatePicker
           id="check-in"
-          type="text"
           className="col-date col-lg-12 col-12"
-          required
+          key="example9"
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+          onBlur={handleOnBlur}
+          placeholderText="Check-in"
         />
-        <label className="label-date" htmlFor="check-in">Check-in</label>
       </div>
       <div className="label-date-second">
-        <input
+        <DatePicker
           id="check-out"
-          type="text"
           className="col-date col-lg-12 col-12"
-          required
+          key="example9"
+          selected={endDate}
+          onChange={(date) => setEndDate(date)}
+          onBlur={handleOnBlur}
+          placeholderText="Check-out"
         />
-        <label className="label-date" htmlFor="check-out">Check-out</label>
       </div>
     </div>
   );
