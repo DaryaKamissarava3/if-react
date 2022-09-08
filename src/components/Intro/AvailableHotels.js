@@ -4,7 +4,7 @@ import '../../assets/styles/HomesGuestsLoves/cardItem.css';
 
 function AvailableHotels(props) {
   return (
-    <section className="section available-hotels hide">
+    <section className={props.isActive ? 'section available-hotels' : 'hide'}>
       <div className="container">
         <div className="section-header">
           <h2 className="section-subtitle underline">Available Hotels</h2>

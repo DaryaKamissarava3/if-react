@@ -6,12 +6,13 @@ import AvailableHotels from './components/Intro/AvailableHotels';
 
 function App() {
   const [searchHotels, setSearchHotels] = useState([]);
+  const [isClassName, setClassName] = useState(false);
 
   return (
     <>
       <Header />
-      <Intro updateData={setSearchHotels} />
-      <AvailableHotels foundHotels={searchHotels} />
+      <Intro updateStatus={setClassName} updateData={setSearchHotels} />
+      <AvailableHotels isActive={isClassName} foundHotels={searchHotels} />
       <Section title="Homes guests loves" />
     </>
   );

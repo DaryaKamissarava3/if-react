@@ -7,7 +7,7 @@ function Intro(props) {
   return (
     <div className="intro" style={{ backgroundImage: ` url(${Background})` }}>
       <div className="container">
-        <IntroInner updateData={props.updateData} />
+        <IntroInner updateStatus={props.updateStatus} updateData={props.updateData} />
       </div>
     </div>
   );

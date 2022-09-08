@@ -7,6 +7,7 @@ import GuestsInput from './GuestsInput';
 function FormFetch(props) {
   const [destinationValue, setDestinationValue] = useState('');
   const [dataFetch, setDataFetch] = useState([]);
+  const [isActiveBlock, setIsActiveBlock] = useState(false);
 
   const getData = useCallback(() => {
     fetch(`https://fe-student-api.herokuapp.com/api/hotels?search=${destinationValue}`)
@@ -27,13 +28,14 @@ function FormFetch(props) {
 
   const handleClick = () => {
     const resultArrOfHotels = dataFetch;
-    const availableBlock = document.getElementsByClassName('available-hotels')[0];
+    const blockStatus = setIsActiveBlock(current => !current);
+    //const availableBlock = document.getElementsByClassName('available-hotels')[0];
     if (resultArrOfHotels.length === 0) {
-      availableBlock.classList.add('hide');
+      //availableBlock.classList.add('hide');
       alert('nothing was found');
       return;
     }
-    availableBlock.classList.remove('hide');
+    props.updateStatus(blockStatus);
     props.updateData(resultArrOfHotels);
   };
 

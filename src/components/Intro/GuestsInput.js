@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Modal from "./Modal";
 
+
 function DestinationInput() {
   const [modalActive, setModalActive] = useState(false);
   const [countAdults, setCountAdults] = useState(0);
@@ -40,6 +41,7 @@ function DestinationInput() {
       setCountRooms(countRooms - 1);
     }
   };
+
   return (
     <>
       <input

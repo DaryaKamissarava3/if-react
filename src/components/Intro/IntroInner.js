@@ -11,7 +11,7 @@ function IntroInner(props) {
         Discover stays<br />
         to live, work or just relax
       </h1>
-      <FormFetch updateData={props.updateData} />
+      <FormFetch  updateStatus={props.updateStatus} updateData={props.updateData} />
       <div className="download-buttons">
         <button type="button" className="download-button google-play-button">
           <img src={googlePlay} alt="google-play img" />
