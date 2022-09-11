@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Section from './components/HomesGuestsLoves/Section';
+import Header from './components/Intro/Header';
+import Intro from './components/Intro/Intro';
+import AvailableHotels from './components/Intro/AvailableHotels';
 
 function App() {
+  const [searchHotels, setSearchHotels] = useState([]);
+  const [isClassName, setClassName] = useState(false);
+
   return (
-    <div>
+    <>
+      <Header />
+      <Intro updateStatus={setClassName} updateData={setSearchHotels} />
+      <AvailableHotels isActive={isClassName} foundHotels={searchHotels} />
       <Section title="Homes guests loves" />
-    </div>
+    </>
   );
 }
 

@@ -1,14 +1,17 @@
 import React from 'react';
-import Container from './Container';
-import '../../assets/styles/section.css';
+import '../../assets/styles/HomesGuestsLoves/section.css';
+import SectionTitle from './SectionTitle';
+import Card from './Card';
 
 function Section(props) {
   return (
     <section className="section section--blue">
-      <Container
-        title={props.title}
-
-      />
+      <div className="container">
+        <SectionTitle
+          title={props.title}
+        />
+        <Card />
+      </div>
     </section>
   );
 }

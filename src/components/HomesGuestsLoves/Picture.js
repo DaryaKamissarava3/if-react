@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/picture.css';
+import '../../assets/styles/HomesGuestsLoves/picture.css';
 
 function Picture(props) {
   return (

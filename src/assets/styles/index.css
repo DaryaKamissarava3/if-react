@@ -1,3 +1,5 @@
+@import url('./fonts.css');
+
 :root {
   --general-blue-color: #10367c;
   --accent-blue-color: #3077c6;
@@ -35,3 +37,10 @@ h5,
 h6 {
   margin: 0;
 }
+
+.container {
+  width: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+}
+

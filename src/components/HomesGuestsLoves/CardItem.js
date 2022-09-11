@@ -1,6 +1,6 @@
 import React from 'react';
 import Picture from './Picture';
-import '../../assets/styles/cardItem.css';
+import '../../assets/styles/HomesGuestsLoves/cardItem.css';
 
 function CardItem(props) {
   return (
@@ -11,8 +11,10 @@ function CardItem(props) {
       />
       <div className="card-hostel-name">{props.name}</div>
       <div className="card-hostel-location">
-        {props.city}
-        {props.country}
+        {props.city},
+        <span className="card-hostel-country">
+          {props.country}
+        </span>
       </div>
     </div>
   );

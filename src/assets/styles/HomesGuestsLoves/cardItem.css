@@ -17,3 +17,7 @@
   font-weight: 400;
   color: var(--secondary-text-color);
 }
+
+.card-hostel-country{
+  padding-left: 5px;
+}
