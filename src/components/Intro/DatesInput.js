@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 function DestinationInput() {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  const handleOnBlur = ({ target: { value } }) => {
+  const handleOnBlur = ({target: { value }}) => {
     const date = new Date(value);
-      console.log("value: %s", date);
+    console.log('value: %s', date);
   };
   return (
 

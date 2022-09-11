@@ -1,42 +1,29 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import '../../assets/styles/Intro/Form.css';
 import DestinationInput from './DestinationInput';
 import DatesInput from './DatesInput';
 import GuestsInput from './GuestsInput';
 
-function FormFetch(props) {
+function FormFetch({updateStatus,updateData}) {
   const [destinationValue, setDestinationValue] = useState('');
-  const [dataFetch, setDataFetch] = useState([]);
-  const [isActiveBlock, setIsActiveBlock] = useState(false);
 
-  const getData = useCallback(() => {
-    fetch(`https://fe-student-api.herokuapp.com/api/hotels?search=${destinationValue}`)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res)
-        setDataFetch(res)
-      })
-  })
-
-  useEffect(() => {
-    getData()
-  }, [destinationValue])
+  const getData = async () => {
+    const response = await fetch(`https://fe-student-api.herokuapp.com/api/hotels?search=${destinationValue}`)
+    return response.json();
+  }
 
   const handleInput = (event) => {
     setDestinationValue(event.target.value);
   };
 
-  const handleClick = () => {
-    const resultArrOfHotels = dataFetch;
-    const blockStatus = setIsActiveBlock(current => !current);
-    //const availableBlock = document.getElementsByClassName('available-hotels')[0];
+  const handleClick = async () => {
+    const resultArrOfHotels = await getData();
     if (resultArrOfHotels.length === 0) {
-      //availableBlock.classList.add('hide');
       alert('nothing was found');
       return;
     }
-    props.updateStatus(blockStatus);
-    props.updateData(resultArrOfHotels);
+    updateStatus((prevState)=>!prevState);
+    updateData(resultArrOfHotels);
   };
 
   return (
@@ -56,6 +43,7 @@ function FormFetch(props) {
           </button>
         </div>
       </form>
+
     </article>
   );
 }

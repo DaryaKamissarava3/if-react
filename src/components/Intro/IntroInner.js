@@ -1,8 +1,7 @@
 import React from 'react';
 import appStore from '../../assets/images/intro/app-store.svg';
 import googlePlay from '../../assets/images/intro/google-play.svg';
-import Form from './Form';
-import FormFetch from './FornFetch';
+import FormFetch from './FormFetch';
 
 function IntroInner(props) {
   return (
@@ -11,7 +10,7 @@ function IntroInner(props) {
         Discover stays<br />
         to live, work or just relax
       </h1>
-      <FormFetch  updateStatus={props.updateStatus} updateData={props.updateData} />
+      <FormFetch updateStatus={props.updateStatus} updateData={props.updateData} />
       <div className="download-buttons">
         <button type="button" className="download-button google-play-button">
           <img src={googlePlay} alt="google-play img" />

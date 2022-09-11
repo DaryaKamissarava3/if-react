@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import Modal from "./Modal";
-
+import React, { useState } from 'react';
+import Modal from './Modal';
 
 function DestinationInput() {
   const [modalActive, setModalActive] = useState(false);
@@ -69,7 +68,12 @@ function DestinationInput() {
               onClick={minusCountAdults}
             >-
             </button>
-            <input id="adults-inp" type="text" value={countAdults} className="counter-value-adults"/>
+            <input
+              id="adults-inp"
+              type="text"
+              value={countAdults}
+              className="counter-value-adults"
+            />
             <button
               id="plus-adults"
               className="counter-btn-adults"
