@@ -2,15 +2,15 @@ import React from 'react';
 import CardItem from '../HomesGuestsLoves/CardItem';
 import '../../assets/styles/HomesGuestsLoves/cardItem.css';
 
-function AvailableHotels(props) {
+function AvailableHotels({isActive,foundHotels}) {
   return (
-    <section className={props.isActive ? 'section available-hotels' : 'hide'}>
+    <section className={isActive ? 'section available-hotels' : 'hide'}>
       <div className="container">
         <div className="section-header">
           <h2 className="section-subtitle underline">Available Hotels</h2>
         </div>
         <div className="card">
-          {props.foundHotels.map((item) =>
+          {foundHotels.map((item) =>
             (
               <CardItem
                 imageUrl={item.imageUrl}

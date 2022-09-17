@@ -5,7 +5,7 @@ import DestinationInput from './DestinationInput';
 import DatesInput from './DatesInput';
 import GuestsInput from './GuestsInput';
 
-function Form(props) {
+function Form({updateData}) {
   const [destination, setDestination] = useState('');
 
   const handleInput = (event) => {
@@ -30,7 +30,7 @@ function Form(props) {
       return;
     }
     availableHotelsBlock.classList.remove('hide');
-    props.updateData(resultArrOfHotels);
+    updateData(resultArrOfHotels);
   };
 
   return (

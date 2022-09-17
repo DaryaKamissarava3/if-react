@@ -25,7 +25,7 @@ function DestinationInput() {
       const newDivWithText = document.createElement('div');
 
       const newDivText = document.createTextNode(
-        "What is the age of the child you're travelling with ?",
+        "What is the age of the child you're travelling with ?"
       );
       newDivWithText.className = 'popup-text-block';
       newDivWithText.id = 'text-block';
