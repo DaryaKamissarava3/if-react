@@ -9,7 +9,7 @@ function CardItem(props) {
         imageUrl={props.imageUrl}
         name={props.name}
       />
-      <div className="card-hostel-name">{props.name}</div>
+        <div className="card-hostel-name">{props.name}</div>
       <div className="card-hostel-location">
         {props.city},
         <span className="card-hostel-country">
