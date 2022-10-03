@@ -1,8 +1,7 @@
 import React from 'react';
 import CardItem from '../HomesGuestsLoves/CardItem';
 import '../../assets/styles/HomesGuestsLoves/cardItem.css';
-import {BrowserRouter as Router, Routes, Route, Link, useParams} from "react-router-dom";
-import Picture from "../HomesGuestsLoves/Picture";
+import { Link } from "react-router-dom";
 import Hotel from "./Hotel";
 
 
@@ -28,14 +27,6 @@ function AvailableHotels({isActive,foundHotels}) {
             ))}
         </div>
       </div>
-      <Router>
-        <nav>
-          <Link to="/hotels">Hotel</Link>
-        </nav>
-      </Router>
-      <Routes>
-        <Route path="/hotels" element={<Hotel foundHotels={foundHotels}  />} />
-      </Routes>
     </section>
   );
 

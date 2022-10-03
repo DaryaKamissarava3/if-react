@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderInner from './HeaderInner';
-import '../../assets/styles/Intro/Header.css';
+import '../../assets/styles/Intro/header.css';
 
 function Header() {
   return (

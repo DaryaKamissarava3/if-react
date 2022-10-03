@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../assets/styles/Intro/Form.css';
+import '../../assets/styles/Intro/form.css';
 import data from '../../constants/arrays/Hotels';
 import DestinationInput from './DestinationInput';
 import DatesInput from './DatesInput';
