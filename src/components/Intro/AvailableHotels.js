@@ -2,8 +2,7 @@ import React from 'react';
 import CardItem from '../HomesGuestsLoves/CardItem';
 import '../../assets/styles/HomesGuestsLoves/cardItem.css';
 import { Link } from "react-router-dom";
-import Hotel from "./Hotel";
-
+import HotelRoutes from "../Routes/HotelRoutes";
 
 function AvailableHotels({isActive,foundHotels}) {
   return (
@@ -27,6 +26,7 @@ function AvailableHotels({isActive,foundHotels}) {
             ))}
         </div>
       </div>
+      <HotelRoutes />
     </section>
   );
 
