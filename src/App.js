@@ -1,11 +1,12 @@
 import React from 'react';
-import MainPage from "./components/containers/MainPage";
+import Layout from './pages/Layout/index.js';
+import Router from './routes/Router/index.js';
 
 function App() {
   return (
-    <>
-     <MainPage />
-    </>
+    <Layout>
+      <Router />
+    </Layout>
   );
 }
 
