@@ -32,6 +32,8 @@ module.exports = {
     "no-unused-vars":"off",
     "no-alert":"off",
     "func-names":"off",
+    "react/function-component-definition":"off",
+    "arrow-body-style":"off",
   },
   parserOptions: {
     ecmaVersion: 6,
